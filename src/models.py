@@ -65,7 +65,7 @@ class Favorites_characters(db.Model):
     characters_id = db.Column(db.Integer, db.ForeignKey('character.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 #     # character = db.relationship('Character', backref='favorites')
-#     # user = db.relationship('User', backref='favorite_characters')
+    user = db.relationship('User', backref='favorite_characters')
 
 #     def __repr__(self):
 #         return '<Favorites_characters %r>' % self.id
